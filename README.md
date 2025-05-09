@@ -59,8 +59,8 @@ php artisan key:generate
 
 ## 🔧 Roadmap / Ideas
 
--   [ ] Publish to Packagist
--   [ ] Add example Livewire components
+-   [ ] Add basic Livewire components
+-   [ ] Add basic Laravel components
 -   [ ] Create CLI to scaffold new views/components/styles
 
 ---
