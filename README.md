@@ -16,7 +16,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 -   ✅ Utility-based SCSS (customized Bootstrap-style classes)
 -   ✅ Livewire views organized under `resources/views`
 -   ✅ Livewire layout organized under `resources/views/layouts/app.blade.php`
--   ✅ Modular SCSS structure with `components/`, `layout/`, `themes/`, `utilities/`
+-   ✅ Modular SCSS structure with `components/`, `layout/`, `themes/`, `utilities/`, `views/`
 -   ✅ User migration separated into its own clean file
 
 ---
