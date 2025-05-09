@@ -23,7 +23,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 
 ## 🚀 Installation
 
-> **Note:** This is not on Packagist yet.
+> `git clone https://github.com/ChaosWebDev/cwd-laravel-kit.git my-project-name`
 
 Clone manually:
 
