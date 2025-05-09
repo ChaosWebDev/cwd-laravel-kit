@@ -24,6 +24,8 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 ## 🚀 Installation
 
 > `git clone https://github.com/ChaosWebDev/cwd-laravel-kit.git my-project-name`
+> `cd my-project-name`
+> `php kit`
 
 Clone manually:
 
