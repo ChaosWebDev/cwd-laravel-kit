@@ -28,6 +28,8 @@ passthru('composer install');
 // Step 3: Run npm install
 echo "📦 Running npm install..." . PHP_EOL;
 passthru('npm install');
+echo "📦 Updating modules..." . PHP_EOL;
+passthru('npm update');
 
 // Step 4: Generate app key
 echo "🔑 Generating app key..." . PHP_EOL;
