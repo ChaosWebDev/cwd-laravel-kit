@@ -1,0 +1,26 @@
+body {
+    background: var(--bodyBG);
+    color: var(--bodyFG);
+
+    header {
+        &>* {
+            color: var(--warning);
+        }
+    }
+
+    nav,
+    footer {
+        background: var(--navBG);
+        color: var(--navFG);
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover {
+                background: var(--navBGHover);
+                color: var(--navFGHover);
+            }
+        }
+    }
+}

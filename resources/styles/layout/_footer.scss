@@ -1,0 +1,9 @@
+@use "../components/components" as *;
+
+footer {
+    @extend .row, .align-center;
+
+    a {
+        transition: background 0.2s ease, color 0.2s ease;
+    }
+}

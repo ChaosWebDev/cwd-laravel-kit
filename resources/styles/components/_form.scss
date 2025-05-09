@@ -1,0 +1,39 @@
+@use "../utilities/utilities" as *;
+
+form:not(.grid) {
+    @extend .column, .align-center, .gap-4;
+
+    .form-group {
+        @extend .column, .align-start, .gap-1;
+
+        label {
+            @extend .font-medium, .mb-1;
+            width: 100%;
+
+            &.required {
+                color: var(--emphasis);
+            }
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            @extend .text-base, .p-2;
+            border: 1px solid var(--borderColor);
+            border-radius: 0.25rem;
+            background-color: var(--bodyBG);
+            color: var(--bodyFG);
+            width: 100%;
+        }
+
+        .error {
+            color: var(--danger, red);
+            @extend .text-lg, .mt-1;
+        }
+    }
+
+    .buttons {
+        @extend .row, .align-center, .justify-evenly, .gap-2;
+    }
+}

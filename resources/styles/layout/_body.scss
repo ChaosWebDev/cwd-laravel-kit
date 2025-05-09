@@ -1,0 +1,15 @@
+@use "../utilities/utilities" as util;
+@use "../themes/themes" as *;
+
+body,
+*,
+*::before,
+*::after {
+    @include util.reset;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
