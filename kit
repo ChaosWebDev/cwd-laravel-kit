@@ -1,0 +1,45 @@
+#!/usr/bin/env php
+
+<?php
+
+echo "🛠️  Initializing CWD Laravel Kit..." . PHP_EOL;
+
+// Early exit check
+if (!file_exists('artisan') || !file_exists('composer.json')) {
+    echo "❌ Error: This script must be run from the root of a Laravel project." . PHP_EOL;
+    exit(1);
+}
+
+// Step 1: Copy .env if not exists
+if (!file_exists('.env')) {
+    if (copy('.env.example', '.env')) {
+        echo "✅ .env created" . PHP_EOL;
+    } else {
+        echo "❌ Failed to create .env" . PHP_EOL;
+    }
+} else {
+    echo "ℹ️ .env already exists" . PHP_EOL;
+}
+
+// Step 2: Run composer install
+echo "📦 Running composer install..." . PHP_EOL;
+passthru('composer install');
+
+// Step 3: Run npm install
+echo "📦 Running npm install..." . PHP_EOL;
+passthru('npm install');
+
+// Step 4: Generate app key
+echo "🔑 Generating app key..." . PHP_EOL;
+passthru('php artisan key:generate');
+
+// Optional: Run migrations
+echo PHP_EOL . "❓ Run database migrations? (y/n): ";
+$handle = fopen("php://stdin", "r");
+$line = trim(fgets($handle));
+if (strtolower($line) === 'y') {
+    echo "🧱 Running migrations..." . PHP_EOL;
+    passthru('php artisan migrate');
+}
+
+echo "✅ Initialization complete." . PHP_EOL;
