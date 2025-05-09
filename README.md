@@ -42,10 +42,15 @@ php artisan key:generate
 
 ---
 
+## Recent Updates
+
+- Added `kit` script for first-time setup
+-- Run with `php kit` for windows or `./kit` for `bash`
+
+---
+
 ## 🔧 Roadmap / Ideas
 
-- [ ] Add `kit:init` script for first-time setup
-- [ ] Publish to Packagist
 - [ ] Add example Livewire components
 - [ ] Create CLI to scaffold new views/components/styles
 
