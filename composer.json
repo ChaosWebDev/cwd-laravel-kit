@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "chaos/laravel-kit",
+    "name": "chaoswebdev/laravel-kit",
     "type": "project",
     "description": "My skeleton application for the Laravel framework. Includes SCSS stylings (basic) and Livewire.",
     "keywords": ["laravel", "framework"],
