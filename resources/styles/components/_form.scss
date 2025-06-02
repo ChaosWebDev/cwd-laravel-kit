@@ -1,39 +1,36 @@
 @use "../utilities/utilities" as *;
 
-form:not(.grid) {
-    @extend .column, .align-center, .gap-4;
+form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem 0.5rem;
 
-    .form-group {
-        @extend .column, .align-start, .gap-1;
+    label {
+        text-align: right;
+    }
 
-        label {
-            @extend .font-medium, .mb-1;
-            width: 100%;
+    input,
+    select,
+    textarea {
+        @extend .text-base, .p-2;
+        border: 1px solid var(--borderColor);
+        border-radius: 0.25rem;
+        background-color: var(--bodyBG);
+        color: var(--bodyFG);
+        width: 100%;
+    }
 
-            &.required {
-                color: var(--emphasis);
-            }
-        }
+    .col-2,
+    .col-full {
+        grid-column: 1 / -1;
+    }
 
-        input,
-        select,
-        button,
-        textarea {
-            @extend .text-base, .p-2;
-            border: 1px solid var(--borderColor);
-            border-radius: 0.25rem;
-            background-color: var(--bodyBG);
-            color: var(--bodyFG);
-            width: 100%;
-        }
-
-        .error {
-            color: var(--danger, red);
-            @extend .text-lg, .mt-1;
-        }
+    .error {
+        color: var(--danger, red);
+        @extend .text-lg, .mt-1, .col-full;
     }
 
     .buttons {
-        @extend .row, .align-center, .justify-evenly, .gap-2;
+        @extend .row, .align-center, .justify-evenly, .gap-2, .col-full;
     }
 }
