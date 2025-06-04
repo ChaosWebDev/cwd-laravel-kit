@@ -10,7 +10,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 
 ## 📦 Features
 
--   ✅ Laravel 12+
+-   ✅ Laravel 12.*
 -   ✅ Livewire v3
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
 -   ✅ Utility-based SCSS (customized Bootstrap-style classes)
@@ -52,18 +52,10 @@ php artisan key:generate
 
 ---
 
-## 🆕 Recent Updates
-
--   Added `kit` script for first-time setup  
-    → Run with `php kit` (Windows) or `./kit` (Linux/macOS)
-
----
-
 ## 🔧 Roadmap / Ideas
 
--   [ ] Add basic Livewire components
--   [ ] Add basic Laravel components
--   [ ] Create CLI to scaffold new views/components/styles
+-   [ ] Add additional basic Livewire components
+-   [ ] Add additional basic Laravel components
 
 ---
 
