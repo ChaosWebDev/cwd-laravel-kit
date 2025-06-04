@@ -1,36 +1,68 @@
 @use "../utilities/utilities" as *;
 
 form {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 1rem 0.5rem;
+    @extend .column;
+    width: fit-content;
 
-    label {
-        text-align: right;
-    }
+    fieldset {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1.25rem 0.5rem;
+        align-items: center;
 
-    input,
-    select,
-    textarea {
-        @extend .text-base, .p-2;
-        border: 1px solid var(--borderColor);
-        border-radius: 0.25rem;
-        background-color: var(--bodyBG);
-        color: var(--bodyFG);
-        width: 100%;
-    }
+        padding: 1rem;
+        border-radius: 10px;
 
-    .col-2,
-    .col-full {
-        grid-column: 1 / -1;
-    }
+        label {
+            text-align: right;
+        }
 
-    .error {
-        color: var(--danger, red);
-        @extend .text-lg, .mt-1, .col-full;
-    }
+        input,
+        select,
+        textarea {
+            @extend .text-base, .p-2;
+            border: 1px solid var(--borderColor);
+            border-radius: 0.25rem;
+            background-color: var(--bodyBG);
+            color: var(--bodyFG);
+            width: 100%;
+        }
 
-    .buttons {
-        @extend .row, .align-center, .justify-evenly, .gap-2, .col-full;
+        .password-wrapper {
+            position: relative;
+
+            input {
+                padding-right: 2.5rem;
+            }
+
+            i.password_eye {
+                position: absolute;
+                top: 50%;
+                right: 0.75rem;
+                transform: translateY(-50%);
+                cursor: pointer;
+                color: var(--bodyFG);
+                font-size: 1.1rem;
+                pointer-events: auto;
+
+                &.active {
+                    color: var(--accent);
+                }
+            }
+        }
+
+        .col-2,
+        .col-full {
+            grid-column: 1 / -1;
+        }
+
+        .error {
+            color: var(--danger, red);
+            @extend .text-lg, .mt-1, .col-full;
+        }
+
+        .buttons {
+            @extend .row, .align-center, .justify-evenly, .gap-2, .col-full;
+        }
     }
 }
