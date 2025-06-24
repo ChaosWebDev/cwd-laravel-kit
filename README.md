@@ -2,15 +2,13 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-12.x-red?logo=laravel&logoColor=white)](https://laravel.com) [![Livewire](https://img.shields.io/badge/Livewire-v3-blue?logo=livewire)](https://livewire.laravel.com) [![SCSS](https://img.shields.io/badge/SCSS-ready-cc6699?logo=sass&logoColor=white)](https://sass-lang.com) [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)[![GitHub Stars](https://img.shields.io/github/stars/ChaosWebDev/cwd-laravel-kit?style=social)](https://github.com/ChaosWebDev/cwd-laravel-kit/stargazers)[![Total Downloads](https://img.shields.io/packagist/dt/chaoswebdev/laravel-kit)](https://packagist.org/packages/chaoswebdev/laravel-kit)
 
-
-
 A minimal, modern Laravel **v12.\*** starter kit built for rapid development with clean defaults, Livewire v3, and SCSS-based styling utilities.
 
 ---
 
 ## 📦 Features
 
--   ✅ Laravel 12.*
+-   ✅ Laravel 12.\*
 -   ✅ Livewire v3
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
 -   ✅ Utility-based SCSS (customized Bootstrap-style classes)
@@ -25,9 +23,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 
 ## 🚀 Installation
 
-> `git clone https://github.com/ChaosWebDev/cwd-laravel-kit.git my-project-name`
-> `cd my-project-name`
-> `php kit`
+> `git clone https://github.com/ChaosWebDev/cwd-laravel-kit.git my-project-name` > `cd my-project-name` > `php kit`
 
 Clone manually:
 
@@ -49,6 +45,36 @@ php artisan key:generate
 -   `resources/views/` → Updated default Livewire structure
 -   `resources/views/components/layouts/app.blade.php` → Updated default Livewire layout location
 -   `database/migrations/` → `users` table isolated in its own migration
+
+---
+
+## Git
+
+You can commit, version tag, and push using the `kit-commit` file in the root directory.
+
+> `php kit-commit -n="Notes Here" -v="0.0.0"`
+> The file will then run:
+
+```bash
+git add .
+git commit -m $notes
+git tag v{$version} -m "Release v{$version}"
+git push
+git push origin v{$version}
+```
+
+#### Example
+
+If you do `php kit-commit -n="See Changelog for v0.0.1" -v="0.0.1"`
+The system will run:
+
+```bash
+git add .
+git commit -m "See Changelog for v0.0.1"
+git tag v0.0.1 -m "Release v0.0.1"
+git push
+git push origin v0.0.1
+```
 
 ---
 

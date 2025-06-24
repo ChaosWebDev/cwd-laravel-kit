@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+$options = getopt("n:v:", ["notes:", "version:"]);
+$notes = $options['n'] ?? $options['notes'] ?? null;
+$version = $options['v'] ?? $options['version'] ?? null;
+
+if (!$notes || !$version) {
+    echo "Usage: php kit-commit -n=\"Commit message\" -v=\"1.3.2\"\n";
+    exit(1);
+}
+
+$tag = "v$version";
+
+// Run commands
+exec("git add .", $out1, $code1);
+exec("git commit -m \"$notes\"", $out2, $code2);
+exec("git tag -a $tag -m \"Release $tag\"", $out3, $code3);
+exec("git push", $out4, $code4);
+exec("git push origin $tag", $out5, $code5);
+
+// Output result
+echo "✅ Git commit and tag complete for $tag\n";
