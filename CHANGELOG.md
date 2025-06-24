@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.3.0] - 2025-06-24
+
+### Changed
+
+-   Re-enabled `session` and `cache` via database (uncommented migrations)
+-   Updated `MAIL` configuration in `.env`
+-   Minor updates to `User` model, including added `username` field
+-   Moved user seeding logic to a dedicated `UserSeeder` and updated `DatabaseSeeder` accordingly
+-   Updated `UserFactory` to generate `username`
+-   Secured debugging routes to ensure `APP_ENV` is set to **local**, not **production**
+
+### Next Up
+
+-   Migrating static styles to a new custom library
+
 ## [1.2.0] - 2025-06-04
 
 ### Changed

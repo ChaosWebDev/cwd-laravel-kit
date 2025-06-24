@@ -23,9 +23,15 @@ Route::middleware('auth')->group(function () {
 
 
 
+
+
+
+
 // ! DEBUGGING DEVELOPMENT ROUTES ! //
-Route::get('/debug/clear',function() {
-    Artisan::call('optimize:clear');
-    Auth::logout();
-    return redirect()->route('dashboard');
-});
+if (app()->environment('local')) {
+    Route::get('/clear', function () {
+        Artisan::call('optimize:clear');
+        Auth::logout();
+        return redirect()->route('dashboard');
+    });
+}
