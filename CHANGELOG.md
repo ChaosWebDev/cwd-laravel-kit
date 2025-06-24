@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.3.1] - 2025-06-24
+
+### Removed from **Composer**
+
+-   `laravel/pail`
+-   `laravel/pint`
+-   `laravel/sail`
+
+### Next Up
+
+-   Moving static styles to new library (to be built)
+
 ## [1.3.0] - 2025-06-24
 
 ### Changed
