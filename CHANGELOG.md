@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.4.0] - 2025-06-24
+
+### Removed
+
+-   Existing styles except `views/*`
+-   Removed `resources/styles/views` directory including the `views.scss` file
+    - `views` styles will now be partials inside `resources/styles/` and forwarded via `app.scss`
+
+### Added
+
+-   Installed `cwd-scss` via `npm i cwd-scss`
+
+### Changed
+
+-   `bootstrap.js` to include `import "cwd-scss";`
+-   Moved `resources/styles/views/_auth.scss` to `resources/styles/_auth.scss` and updated `app.scss` `@forward`
+-   `dashboard.blade.php` updated to include placeholder content
+-   `composer.json`-->`minimum-stability` set to `dev`
+
 ## [1.3.2] - 2025-06-24
 
 ### Added

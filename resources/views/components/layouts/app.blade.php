@@ -1,9 +1,5 @@
-@php
-    $theme = session('theme','dark');
-@endphp
-
 <!DOCTYPE html>
-<html lang="en" data-theme="{{ $theme }}">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
