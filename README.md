@@ -25,9 +25,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 
 ## 🚀 Installation
 
-> `composer create-project chaoswebdev/laravel-kit my-project-name`
-> `cd my-project-name`
-> `php kit`
+> `composer create-project chaoswebdev/laravel-kit my-project-name` > `cd my-project-name` > `php kit`
 
 Clone manually:
 
@@ -86,7 +84,9 @@ git push origin v0.0.1
 ## 🔧 Roadmap / Ideas
 
 -   [ ] Add additional basic Livewire components
--   [ ] Add additional basic Laravel components
+-   [x] Add additional basic Laravel components
+    -   Added `form` components
+    -   Added `link` component that supports [`NerdFonts`](https://www.nerdfonts.com/cheat-sheet) `i.nf`
 
 ---
 

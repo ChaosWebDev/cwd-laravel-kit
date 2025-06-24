@@ -1,12 +1,3 @@
-@props(['name', 'id' => null, 'model' => null, 'label' => null])
-
-@php
-    $id ??= $name;
-    $model ??= $name;
-    $label ??= ucwords(str_replace('_', ' ', $name));
-    $eyeId = "password_{ $id }_eye";
-@endphp
-
 <label for="{{ $id }}">{{ $label }}</label>
 <div class="password-wrapper">
     <input type="password" name="{{ $name }}" id="{{ $id }}" wire:model="{{ $model }}"

@@ -1,5 +1,5 @@
 <label for="{{ $id }}">{{ $label }}</label>
-<input type="text" name="{{ $name }}" id="{{ $id }}" wire:model="{{ $model }}"
+<input type="number" name="{{ $name }}" id="{{ $id }}" wire:model="{{ $model }}"
     {{ $attributes }}>
 @error($model)
     <div class="error">{{ $message }}</div>

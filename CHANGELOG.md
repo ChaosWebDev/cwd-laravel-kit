@@ -7,13 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.0] - 2025-06-24
+
+### Added (Laravel Components)
+
+-   `Form/Date`
+-   `Form/Number`
+-   `Form/Time`
+-   `Link`
+
+### Updated (Laravel Components)
+
+-   `Form/Email`
+-   `Form/Password`
+-   `Form/Text`
+
+---
+
 ## [1.4.0] - 2025-06-24
 
 ### Removed
 
 -   Existing styles except `views/*`
 -   Removed `resources/styles/views` directory including the `views.scss` file
-    - `views` styles will now be partials inside `resources/styles/` and forwarded via `app.scss`
+    -   `views` styles will now be partials inside `resources/styles/` and forwarded via `app.scss`
 
 ### Added
 
@@ -26,6 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   `dashboard.blade.php` updated to include placeholder content
 -   `composer.json`-->`minimum-stability` set to `dev`
 
+---
+
 ## [1.3.2] - 2025-06-24
 
 ### Added
@@ -35,6 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Next Up
 
 -   Moving static styles to new library (to be built)
+
+---
 
 ## [1.3.1] - 2025-06-24
 
@@ -47,6 +68,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Next Up
 
 -   Moving static styles to new library (to be built)
+
+---
 
 ## [1.3.0] - 2025-06-24
 
@@ -62,6 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Next Up
 
 -   Migrating static styles to a new custom library
+
+---
 
 ## [1.2.0] - 2025-06-04
 
@@ -83,6 +108,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Added 3 `form` components: `E-Mail`, `Password`, `Text`
     -   Each must have a `name` attribute passed
     -   Optional attributes passed include: `id`, `model`, `label` (label is the text displayed within the `label` element)
+
+---
 
 ## [1.1.0] - 2025-06-02
 
