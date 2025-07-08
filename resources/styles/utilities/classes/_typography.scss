@@ -1,0 +1,98 @@
+// ! FONT SIZE ! //
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+// ! FONT WEIGHT ! //
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+// ! TEXT ALIGNMENT ! //
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+// ! CLICKABILITY ! //
+.clickable {
+    cursor: pointer;
+}
+
+// ! FONT VARIANT ! //
+.fv-sc {
+    font-variant: small-caps;
+}
+
+// ! TEXT TRANSFORM ! //
+.tt-cap {
+    text-transform: capitalize;
+}
+
+.tt-lower {
+    text-transform: lowercase;
+}
+
+.tt-upper {
+    text-transform: uppercase;
+}
+
+// ! FONT FAMILIES ! //
+.font-sans {
+    font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.font-serif {
+    font-family: var(--font-serif, Georgia, serif);
+}
+
+.font-mono {
+    font-family: var(--font-mono, Menlo, monospace);
+}

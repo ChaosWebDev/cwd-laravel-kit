@@ -1,0 +1,38 @@
+:root {
+    --bodyBG: #{light-dark(#ffffff, #121212)};
+    --bodyFG: #{light-dark(#212529, #e9ecef)};
+    --mutedFG: #{light-dark(#6c757d, #adb5bd)};
+
+    --navBG: #{light-dark(#f8f9fa, #1e1e1e)};
+    --navFG: #{light-dark(#212529, #f8f9fa)};
+    --navBGHover: #{light-dark(#e2e6ea, #2a2a2a)};
+    --navFGHover: #{light-dark(#000000, #ffffff)};
+
+    --accent: #0d6efd;
+    --accentFG: #ffffff;
+    --accentHover: #0a58ca;
+
+    --success: #198754;
+    --successFG: #ffffff;
+    --successHover: #146c43;
+
+    --danger: #dc3545;
+    --dangerFG: #ffffff;
+    --dangerHover: #bb2d3b;
+
+    --warning: #ffc107;
+    --important: var(--warning);
+    --warningFG: #000000;
+
+    --info: #0dcaf0;
+    --infoFG: #000000;
+
+    --anchor: #{light-dark(#0d6efd, #66b2ff)};
+    --anchorHover: #{light-dark(#0a58ca, #3399ff)};
+
+    --borderColor: var(--bodyFG);
+    --clickableBorder: #{light-dark(#dee2e6, #343a40)};
+    --clickableBorderHover: #{light-dark(#adb5bd, #495057)};
+
+    --mutedHover: #{light-dark(#5a6268, #6c757d)};
+}

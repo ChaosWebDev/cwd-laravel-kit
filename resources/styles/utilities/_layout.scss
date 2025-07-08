@@ -1,0 +1,39 @@
+@use "./classes/classes" as *;
+@use "./mixins" as util;
+
+html,
+body,
+*,
+*::before,
+*::after {
+    @include util.reset;
+}
+
+html {
+    height: 100%;
+
+    :where(body) {
+        @extend .column;
+
+        width: clamp(100dvw, 100%, 100dvw);
+        height: clamp(100dvh, 100%, 100dvh);
+        overflow: hidden;
+
+        background: var(--bodyBG);
+        color: var(--bodyFG);
+
+
+        :where(nav, footer, header) {
+            background: var(--navBG);
+            color: var(--navFG);
+        }
+
+        :where(main) {
+            overflow-y: auto;
+        }
+    }
+}
+
+:root {
+    color-scheme: light dark;
+}
