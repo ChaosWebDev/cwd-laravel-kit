@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Linked `routes/_guest.php` to `routes/web.php`
 
+### Changed
+- Updated styles for `login` and `register` views.
+- Updated `login` view and component with commented out 'username' versions (current is e-mail).
+  - **NOTE: Migration/Seeder/Factory/Model are not set for username. Adjust these as needed.**
+
 ---
 
 ## [1.7.0] - 2025-07-22

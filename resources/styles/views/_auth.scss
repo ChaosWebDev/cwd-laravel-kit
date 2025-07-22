@@ -1,0 +1,12 @@
+@use "../utilities/utilities";
+
+main:is(#login, #register) {
+    width: 100%;
+    height: 100%;
+
+    @extend .column, .align-center;
+
+    form {
+        margin-top: clamp(1rem, 5%, 5%);
+    }
+}
