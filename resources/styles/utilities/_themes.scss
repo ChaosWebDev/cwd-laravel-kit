@@ -1,7 +1,6 @@
 :root {
     --bodyBG: #{light-dark(#ffffff, #121212)};
     --bodyFG: #{light-dark(#212529, #e9ecef)};
-    --mutedFG: #{light-dark(#6c757d, #adb5bd)};
 
     --navBG: #{light-dark(#f8f9fa, #1e1e1e)};
     --navFG: #{light-dark(#212529, #f8f9fa)};
@@ -21,7 +20,6 @@
     --dangerHover: #bb2d3b;
 
     --warning: #ffc107;
-    --important: var(--warning);
     --warningFG: #000000;
 
     --info: #0dcaf0;
@@ -34,5 +32,9 @@
     --clickableBorder: #{light-dark(#dee2e6, #343a40)};
     --clickableBorderHover: #{light-dark(#adb5bd, #495057)};
 
+    --mutedFG: #{light-dark(#6c757d, #adb5bd)};
     --mutedHover: #{light-dark(#5a6268, #6c757d)};
+
+    --important: var(--warning);
+    --header: var(--warning);
 }

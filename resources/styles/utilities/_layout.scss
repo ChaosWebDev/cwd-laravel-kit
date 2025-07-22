@@ -37,3 +37,11 @@ html {
 :root {
     color-scheme: light dark;
 }
+
+:root[theme='light'] {
+    color-scheme: light;
+}
+
+:root[theme='dark'] {
+    color-scheme: dark;
+}

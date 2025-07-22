@@ -1,6 +1,6 @@
 @use "../utilities/utilities" as *;
 
-form {
+:where(form) {
     @extend .column;
     width: fit-content;
 

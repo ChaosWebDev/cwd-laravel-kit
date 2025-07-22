@@ -51,4 +51,15 @@
             color: var(--dangerFG);
         }
     }
+
+    &.success {
+        background: var(--success);
+        color: var(--successFG);
+        border: 1px solid var(--successFG);
+
+        &:hover {
+            background: var(--successHover);
+            color: var(--successFG);
+        }
+    }
 }
