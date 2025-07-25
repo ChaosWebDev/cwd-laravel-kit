@@ -35,6 +35,10 @@ passthru('npm update');
 echo "🔑 Generating app key..." . PHP_EOL;
 passthru('php artisan key:generate');
 
+// Step 5: Storage Linkage
+echo "Linking storage" . PHP_EOL;
+passthru('php artisan storage:link');
+
 // Optional: Run migrations
 echo PHP_EOL . "❓ Run database migrations? (y/n): ";
 $handle = fopen("php://stdin", "r");
