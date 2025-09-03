@@ -17,8 +17,6 @@ if (!file_exists('.env')) {
     } else {
         echo "❌ Failed to create .env" . PHP_EOL;
     }
-} else {
-    echo "ℹ️ .env already exists" . PHP_EOL;
 }
 
 // Step 2: Run composer install
@@ -40,12 +38,12 @@ echo "Linking storage" . PHP_EOL;
 passthru('php artisan storage:link');
 
 // Optional: Run migrations
-echo PHP_EOL . "❓ Run database migrations? (y/n): ";
+echo PHP_EOL . "❓ Run database migrations w/ initial seeding? (y/n): ";
 $handle = fopen("php://stdin", "r");
 $line = trim(fgets($handle));
 if (strtolower($line) === 'y') {
     echo "🧱 Running migrations..." . PHP_EOL;
-    passthru('php artisan migrate');
+    passthru('php artisan migrate --seed');
 }
 
 echo "✅ Initialization complete." . PHP_EOL;
