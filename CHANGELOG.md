@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.9.3] - 2025-09-03
+
+### Retracted
+- Reversed changes to kit-commit as they did not function appropriately.
+
+---
+
 ## [1.9.2] - 2025-09-03
 
 ### Added
