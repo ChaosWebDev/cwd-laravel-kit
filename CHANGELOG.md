@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.9.1] - 2025-09-03
+
+### Added
+- Component Form/Input as a wrapper for inputs that are preceeded by a label and succeeded by an `@error` block
+- `Auth::check()` conditional in `routes/_dev.php` for logging out an authenticated user
+- Console Command `php artisan make:mms NAME` to make a `model`,`migration`, and `seeder` with the given model `NAME`
+
+### Combined
+- Moved `resources/scripts/bootstrap.js` content to `resources/scripts/app.js`
+
+### Deleted
+- `resources/scripts/bootstrap.js`
+- All `Form/*` components except the new `Input` one (blade and component files)
+
+---
+
 ## [1.9.0] - 2025-09-03
 
 ### Updated

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Date extends Component
+class Input extends Component
 {
     public function __construct(public string $name, public ?string $id, public ?string $model, public ?string $label)
     {
@@ -17,6 +17,6 @@ class Date extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.form.date');
+        return view('components.form.input');
     }
 }

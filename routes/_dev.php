@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Artisan;
 if (app()->environment('local')) {
     Route::get('/clear', function () {
         Artisan::call('optimize:clear');
-        Auth::logout();
+        if (Auth::check())
+            Auth::logout();
         return redirect()->route('dashboard');
     });
 }
