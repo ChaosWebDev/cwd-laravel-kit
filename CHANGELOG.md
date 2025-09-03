@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.9.0] - 2025-09-03
+
+### Updated
+- Replaced old styles with new - same styles but different file structure
+
+### Added
+- Default route for `/` => `App\Livewire\Dashboard::class`
+
+---
+
 ## [1.8.0] - 2025-07-29
 
 ### Removed
