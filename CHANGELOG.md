@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.9.2] - 2025-09-03
+
+### Added
+- Console command for `php artisan make:vs NAME`. Creates a `view` and a `.scss` file. Automatically appends the new `.scss` file to `views/views.scss`.
+
+### Updated
+- `kit-commit` will auto-increment the 'patch' part of the most recent tagged version if the -v argument is not passed.
+
+---
+
 ## [1.9.1] - 2025-09-03
 
 ### Added
