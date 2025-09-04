@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.10.0] - 2025-09-03
+
+### Added
+- MongoDB Compatability
+  - Added to `config.database`
+  - Added (commented out) to `.env` and `.env.example`
+
+---
+
 ## [1.9.4] - 2025-09-03
 
-## Cleanup
+### Cleanup
 - `kit` - Cleaned up flow - no end-user changes
 
 ---
