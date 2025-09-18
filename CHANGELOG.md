@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.11.0] - 2025-09-18
+### Changes
+- Moved `resources/styles/_layout.scss` to `resources/styles/views/_layout.scss` and `@forward` from inside `views.scss`
+
+---
+
 ## [1.10.0] - 2025-09-03
 
 ### Added
