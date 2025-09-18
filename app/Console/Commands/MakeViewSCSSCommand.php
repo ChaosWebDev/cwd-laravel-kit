@@ -19,7 +19,7 @@ class MakeViewSCSSCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Create a new blank Blade view and SCSS file';
+    protected $description = 'Create a new blank Blade view and SCSS file. Does not create Livewire Components.';
 
     /**
      * Execute the console command.
