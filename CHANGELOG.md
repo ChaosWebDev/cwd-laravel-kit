@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.11.2] - 2025-09-23
+### Fix
+- `_layout.scss ` `@use` connection to bootstrap
+- `.env` and `.env.example` DB_HOST fixed to `127.0.0.1` instead of `mysql`
+
+---
+
 ## [1.11.1] - 2025-09-18
 ### Cleanup
 - Updated description to `MakeViewSCSSCommand.php`
