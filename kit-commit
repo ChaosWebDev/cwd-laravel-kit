@@ -41,17 +41,21 @@ function run($command)
  * Step 1: Auto-increment version if not provided
  */
 if (!$version) {
-    $latest = trim(shell_exec("git describe --tags --abbrev=0 2>/dev/null"));
+    // Get all git tags, sorted newest-first
+    $rawTags = shell_exec("git tag --sort=-v:refname");
+    $tags = array_filter(explode("\n", trim((string) $rawTags)));
+
+    $latest = $tags[0] ?? null;
+
     if ($latest && preg_match('/v?(\d+)\.(\d+)\.(\d+)/', $latest, $m)) {
-        // Auto-bump patch version (e.g., v1.3.2 → v1.3.3)
-        $major = $m[1];
-        $minor = $m[2];
-        $patch = $m[3] + 1;
-        $version = "v{$major}.{$minor}.{$patch}";
+        // Auto-bump patch version (e.g., v1.13.2 → v1.13.3)
+        [$full, $major, $minor, $patch] = $m;
+        $version = "{$major}.{$minor}." . ($patch + 1);
         echo color("⚙️  Auto-incrementing patch version to {$version}", "36") . PHP_EOL;
     } else {
-        echo color("❌ No previous version found. Please specify with -v.", "31") . PHP_EOL;
-        exit(1);
+        // No previous tags found — initialize baseline
+        $version = "1.0.0";
+        echo color("⚙️  No previous tag found, initializing to {$version}", "33") . PHP_EOL;
     }
 }
 
@@ -59,11 +63,11 @@ if (!$version) {
  * Step 2: Validate commit notes
  */
 if (!$notes) {
-    $notes = $version; // Default to version as commit message
+    $notes = "v{$version}"; // Default to version as commit message
 }
 
 if (!str_starts_with($version, 'v')) {
-    $tag = "v$version";
+    $tag = $version;
 } else {
     $tag = $version;
 }

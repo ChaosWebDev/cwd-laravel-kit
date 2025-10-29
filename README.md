@@ -60,6 +60,7 @@ git tag v{$version} -m "Release v{$version}"
 git push
 git push origin v{$version}
 ```
+> `-n` and `-v` are optional. If `-v` is omitted, the file will attempt to find the next version and parse it in for you.
 
 #### Example
 

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.15.0, 1] - 2025-10-29
+### Updated
+- `kit` to ask if `NativePHP` will be used
+  - If `y`, it will `composer require nativephp/desktop` and then `php artisan native:install` automatically
+- `kit-commit` to allow `-n` and `-v` to be optional
+  - If `-v` is omitted, it will attempt to locate the next tag sequence and use that
+- README.md
+
+---
+
 ## [1.14.0] - 2025-10-29
 ### Updated
 - Added theme colors for `--navBorder`, `--dangerBorder`, and `--alert`
