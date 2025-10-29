@@ -1,23 +1,105 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * CWD Laravel Kit Commit Script
+ * 
+ * Usage:
+ *   php kit-commit -n="Commit message" -v="1.3.2"
+ * or simply:
+ *   php kit-commit -n="Commit message"
+ *   (auto-increments version tag)
+ */
+
 $options = getopt("n:v:", ["notes:", "version:"]);
 $version = $options['v'] ?? $options['version'] ?? null;
-$notes = $options['n'] ?? $options['notes'] ?? "v{$version}" ?? null;
+$notes = $options['n'] ?? $options['notes'] ?? null;
 
-if (!$notes || !$version) {
-    echo "Usage: php kit-commit -n=\"Commit message\" -v=\"1.3.2\"\n";
-    exit(1);
+/**
+ * Utility: Colorized output for better readability
+ */
+function color($text, $code = '0')
+{
+    return "\033[{$code}m{$text}\033[0m";
 }
 
-$tag = "v$version";
+/**
+ * Utility: Run shell command safely with exit-on-fail
+ */
+function run($command)
+{
+    echo color("▶️  $command", "33") . PHP_EOL;
+    exec($command, $output, $code);
+    if ($code !== 0) {
+        echo color("❌ Command failed: $command", "31") . PHP_EOL;
+        exit($code);
+    }
+    return $output;
+}
 
-// Run commands
-exec("git add .", $out1, $code1);
-exec("git commit -m \"$notes\"", $out2, $code2);
-exec("git tag -a $tag -m \"Release $tag\"", $out3, $code3);
-exec("git push", $out4, $code4);
-exec("git push origin $tag", $out5, $code5);
+/**
+ * Step 1: Auto-increment version if not provided
+ */
+if (!$version) {
+    $latest = trim(shell_exec("git describe --tags --abbrev=0 2>/dev/null"));
+    if ($latest && preg_match('/v?(\d+)\.(\d+)\.(\d+)/', $latest, $m)) {
+        // Auto-bump patch version (e.g., v1.3.2 → v1.3.3)
+        $major = $m[1];
+        $minor = $m[2];
+        $patch = $m[3] + 1;
+        $version = "v{$major}.{$minor}.{$patch}";
+        echo color("⚙️  Auto-incrementing patch version to {$version}", "36") . PHP_EOL;
+    } else {
+        echo color("❌ No previous version found. Please specify with -v.", "31") . PHP_EOL;
+        exit(1);
+    }
+}
 
-// Output result
-echo "✅ Git commit and tag complete for $tag\n";
+/**
+ * Step 2: Validate commit notes
+ */
+if (!$notes) {
+    $notes = $version; // Default to version as commit message
+}
+
+if (!str_starts_with($version, 'v')) {
+    $tag = "v$version";
+} else {
+    $tag = $version;
+}
+
+$escapedNotes = escapeshellarg($notes);
+$escapedTag = escapeshellarg($tag);
+
+/**
+ * Step 3: Confirm before proceeding
+ */
+echo PHP_EOL . "About to tag and push version " . color($tag, "32") . " with message: " . color("\"$notes\"", "36") . PHP_EOL;
+echo "Continue? [y/N]: ";
+$stdin = fopen("php://stdin", "r");
+$line = strtolower(trim(fgets($stdin)));
+if ($line !== 'y') {
+    echo color("❌ Aborted.", "31") . PHP_EOL;
+    exit(0);
+}
+fclose($stdin);
+
+/**
+ * Step 4: Git operations
+ */
+$diff = trim(shell_exec('git status --porcelain'));
+if ($diff === '') {
+    echo color("⚠️  No changes to commit, skipping commit step.", "33") . PHP_EOL;
+} else {
+    run("git add .");
+    run("git commit -m $escapedNotes");
+}
+
+run("git tag -a $escapedTag -m " . escapeshellarg("Release $tag"));
+run("git push");
+run("git push origin $escapedTag");
+
+/**
+ * Step 5: Done
+ */
+echo PHP_EOL . color("✅ Git commit and tag complete for $tag", "32") . PHP_EOL;

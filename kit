@@ -2,6 +2,8 @@
 
 <?php
 
+$stdin = fopen("php://stdin", "r");
+
 echo "🛠️  Initializing CWD Laravel Kit..." . PHP_EOL;
 
 // Early exit check
@@ -17,6 +19,16 @@ if (!file_exists('.env')) {
     } else {
         echo "❌ Failed to create .env" . PHP_EOL;
     }
+}
+
+// Step 1.5: Ask if NativePHP will be used
+echo "❓ Do you want to use NativePHP? (y/N): ";
+$line = strtolower(trim(fgets($stdin)));
+
+if ($line === 'y') {
+    echo "🧱 Adding NativePHP requirement..." . PHP_EOL;
+    passthru('composer require nativephp/desktop');
+    passthru('php artisan native:install');
 }
 
 // Step 2: Run composer install
@@ -38,12 +50,13 @@ echo "Linking storage" . PHP_EOL;
 passthru('php artisan storage:link');
 
 // Optional: Run migrations
-echo PHP_EOL . "❓ Run database migrations w/ initial seeding? (y/n): ";
-$handle = fopen("php://stdin", "r");
-$line = trim(fgets($handle));
-if (strtolower($line) === 'y') {
+echo PHP_EOL . "❓ Run database migrations w/ initial seeding? (y/N): ";
+$line = strtolower(trim(fgets($stdin)));
+if ($line === 'y') {
     echo "🧱 Running migrations..." . PHP_EOL;
     passthru('php artisan migrate --seed');
 }
+
+fclose($stdin);
 
 echo "✅ Initialization complete." . PHP_EOL;
