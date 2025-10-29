@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.13.0] - 2025-10-29
+### Added
+- `chaoswd/laravel-mongo-models` package which adds command `php artisan make:mongo:model {name} --collection="{collectionName}"`
+
+### Updated
+- Updated README.md
+
+---
+
 ## [1.12.2] - 2025-10-29
 ### Fixed
 - Fixed `render()` method of `FormInput.php`

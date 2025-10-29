@@ -16,6 +16,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 -   ✅ User migration separated into its own clean file
 -   ✅ Added `APP_TIMEZONE` back to `.env` and `configs/app.php`. Defaults to `America/Denver`
 -   ✅ User model has `email` and `username` built in to it
+-   ✅ Ability to use MongoDB
 
 ---
 
