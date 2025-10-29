@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.12.2] - 2025-10-29
+### Fixed
+- Fixed `render()` method of `FormInput.php`
+
+---
+
 ## [1.12.1] - 2025-10-29
 ### Deleted
 - Removed command for making view and scss files due to using `Livewire` instead of views

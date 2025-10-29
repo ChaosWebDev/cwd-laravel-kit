@@ -17,6 +17,6 @@ class FormInput extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.form.input');
+        return view('components.form-input');
     }
 }
