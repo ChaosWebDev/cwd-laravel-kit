@@ -6,6 +6,7 @@
     --navFG: #{light-dark(#212529, #f8f9fa)};
     --navBGHover: #{light-dark(#e2e6ea, #2a2a2a)};
     --navFGHover: #{light-dark(#000000, #ffffff)};
+    --navBorder: var(--bodyFG);
 
     --accent: #0d6efd;
     --accentFG: #ffffff;
@@ -29,6 +30,7 @@
     --anchorHover: #{light-dark(#0a58ca, #3399ff)};
 
     --borderColor: var(--bodyFG);
+    --dangerBorder: var(--danger);
     --clickableBorder: #{light-dark(#dee2e6, #343a40)};
     --clickableBorderHover: #{light-dark(#adb5bd, #495057)};
 
@@ -37,4 +39,5 @@
 
     --important: var(--warning);
     --header: var(--warning);
+    --alert: var(--danger);
 }
