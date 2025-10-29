@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Form;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Input extends Component
+class FormInput extends Component
 {
     public function __construct(public string $name, public ?string $id, public ?string $model, public ?string $label)
     {

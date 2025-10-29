@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.12.1] - 2025-10-29
+### Deleted
+- Removed command for making view and scss files due to using `Livewire` instead of views
+
+### Updated
+- Updated `config/filesystems.php` disks from `local` to `private` for location of `storage/app/private`
+- Moved component `x-form.input` to `x-form-input` and updated blade to match
+
+### Cleanup
+- Updated README.md
+- `.env.example`: cleared `APP_NAME` and updated `APP_URL`
+
+---
+
 ## [1.11.2] - 2025-09-23
 ### Fix
 - `_layout.scss ` `@use` connection to bootstrap

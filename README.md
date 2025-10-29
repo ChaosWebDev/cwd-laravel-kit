@@ -13,12 +13,8 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
 -   ✅ Utility-based SCSS (customized Bootstrap-style classes)
 -   ✅ Livewire views organized under `resources/views`
--   ~~✅ Modular SCSS structure with `components/`, `layout/`, `themes/`, `utilities/`, `views/`~~
 -   ✅ User migration separated into its own clean file
 -   ✅ Added `APP_TIMEZONE` back to `.env` and `configs/app.php`. Defaults to `America/Denver`
--   ~~✅ Commented out migrations for `sessions` and `cache`~~
--   ~~✅ Set `sessions` and `cache` to `file` instead of `database`~~
--   ✅ Uses `cwd-scss` from `npm` for static stylings
 -   ✅ User model has `email` and `username` built in to it
 
 ---
@@ -43,8 +39,6 @@ php artisan key:generate
 
 ## 📁 Directory Highlights
 
--   ~~`resources/styles/` → SCSS split by layout, components, themes, utilities~~
--   ~~`resources/views/` → Updated default Livewire structure~~
 -   `resources/styles/` → Built to contain view stylings as partials to be forwarded in `app.scss`
 -   `resources/views/components/layouts/app.blade.php` → Updated default Livewire layout location
 -   `database/migrations/` → `users` table isolated in its own migration
