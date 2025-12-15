@@ -1,6 +1,6 @@
 # CWD Laravel Kit
 
-[![Laravel](https://img.shields.io/badge/Laravel-12.x-red?logo=laravel&logoColor=white)](https://laravel.com) [![Livewire](https://img.shields.io/badge/Livewire-v3-blue?logo=livewire)](https://livewire.laravel.com) [![SCSS](https://img.shields.io/badge/SCSS-ready-cc6699?logo=sass&logoColor=white)](https://sass-lang.com) [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)[![GitHub Stars](https://img.shields.io/github/stars/ChaosWebDev/cwd-laravel-kit?style=social)](https://github.com/ChaosWebDev/cwd-laravel-kit/stargazers)[![Total Downloads](https://img.shields.io/packagist/dt/chaoswebdev/laravel-kit)](https://packagist.org/packages/chaoswebdev/laravel-kit)
+[![Laravel](https://img.shields.io/badge/Laravel-12.x-red?logo=laravel&logoColor=white)](https://laravel.com) [![Livewire](https://img.shields.io/badge/Livewire-v3-blue?logo=livewire)](https://livewire.laravel.com) [![SCSS](https://img.shields.io/badge/SCSS-ready-cc6699?logo=sass&logoColor=white)](https://sass-lang.com) [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE) [![GitHub Stars](https://img.shields.io/github/stars/ChaosWebDev/cwd-laravel-kit?style=social)](https://github.com/ChaosWebDev/cwd-laravel-kit/stargazers) [![Total Downloads](https://img.shields.io/packagist/dt/chaoswebdev/laravel-kit)](https://packagist.org/packages/chaoswebdev/laravel-kit)
 
 A minimal, modern Laravel **v12.\*** starter kit built for rapid development with clean defaults, Livewire v3, and SCSS-based styling utilities.
 
@@ -11,7 +11,7 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 -   ✅ Laravel 12.\*
 -   ✅ Livewire v3
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
--   ✅ Utility-based SCSS (customized Bootstrap-style classes)
+-   ✅ Utility-based SCSS (Bootstrap-inspired utility classes)
 -   ✅ Livewire views organized under `resources/views`
 -   ✅ User migration separated into its own clean file
 -   ✅ Added `APP_TIMEZONE` back to `.env` and `configs/app.php`. Defaults to `America/Denver`
@@ -80,3 +80,13 @@ git push origin v0.0.1
 ## 📎 Repo
 
 GitHub: [ChaosWebDev/cwd-laravel-kit](https://github.com/ChaosWebDev/cwd-laravel-kit)
+
+---
+
+## Related Project Documentation
+
+- [Laravel](https://laravel.com/docs/12.x/installation)
+- [Livewire](https://livewire.laravel.com/docs/3.x/quickstart)
+- [NativePHP](https://nativephp.com/docs/desktop/2/getting-started/introduction)
+- [Laravel MongoDB](https://github.com/mongodb/laravel-mongodb)
+
