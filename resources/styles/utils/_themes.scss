@@ -6,7 +6,18 @@
     --navFG: #{light-dark(#212529, #f8f9fa)};
     --navBGHover: #{light-dark(#e2e6ea, #2a2a2a)};
     --navFGHover: #{light-dark(#000000, #ffffff)};
-    --navBorder: var(--bodyFG);
+
+    --anchor: #{light-dark(#0d6efd, #66b2ff)};
+    --anchorHover: #{light-dark(#0a58ca, #3399ff)};
+
+    --mutedFG: #{light-dark(#6c757d, #adb5bd)};
+    --mutedHover: #{light-dark(#5a6268, #6c757d)};
+
+    --borderColor: var(--bodyFG);
+    --borderDanger: var(--danger);
+    --borderClickable: #{light-dark(#dee2e6, #343a40)};
+    --borderClickableHover: #{light-dark(#adb5bd, #495057)};
+    --borderNav: var(--bodyFG);
 
     --accent: #0d6efd;
     --accentFG: #ffffff;
@@ -25,17 +36,12 @@
 
     --info: #0dcaf0;
     --infoFG: #000000;
-
-    --anchor: #{light-dark(#0d6efd, #66b2ff)};
-    --anchorHover: #{light-dark(#0a58ca, #3399ff)};
-
+    
     --borderColor: var(--bodyFG);
-    --dangerBorder: var(--danger);
-    --clickableBorder: #{light-dark(#dee2e6, #343a40)};
-    --clickableBorderHover: #{light-dark(#adb5bd, #495057)};
-
-    --mutedFG: #{light-dark(#6c757d, #adb5bd)};
-    --mutedHover: #{light-dark(#5a6268, #6c757d)};
+    --borderDanger: var(--danger);
+    --borderClickable: #{light-dark(#dee2e6, #343a40)};
+    --borderClickableHover: #{light-dark(#adb5bd, #495057)};
+    --borderNav: var(--bodyFG);
 
     --important: var(--warning);
     --header: var(--warning);

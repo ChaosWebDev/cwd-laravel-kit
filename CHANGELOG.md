@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.16.0] - 2025-12-15
+## Cleanup
+- Moved some style files around
+- Renamed some css variables
+  - `--borderNav`, `--borderDanger`, `--borderClickable`, `--borderClickableHover`
+
+---
+
 ## [1.15.0, 1] - 2025-10-29
 ### Updated
 - `kit` to ask if `NativePHP` will be used
