@@ -6,7 +6,7 @@
     "keywords": ["laravel", "framework","chaoswd"],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "chaoswd/laravel-mongo-models": "*",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
