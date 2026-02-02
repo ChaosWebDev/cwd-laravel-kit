@@ -6,8 +6,9 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 
 ---
 
-## 📦 Features
+## 📦 Features/Requirements
 
+-   ✅ PHP v8.4+
 -   ✅ Laravel 12.\*
 -   ✅ Livewire v3
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
