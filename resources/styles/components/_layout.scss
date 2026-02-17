@@ -28,7 +28,8 @@
 html {
 
     :where(body) {
-        @extend .column;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
 
         overflow: hidden;
 
@@ -38,6 +39,10 @@ html {
         :where(nav, footer, header) {
             background: var(--navBG);
             color: var(--navFG);
+        }
+
+        :where(main, footer) {
+            column-span: 12;
         }
     }
 }
