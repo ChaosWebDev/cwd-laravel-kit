@@ -7,21 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.19.0] - 2026-03-25
+
+### Upgraded
+
+* Laravel 12.* → 13.*
+* Laravel Boost 2.*
+* PHPUnit 12.*
+* Livewire 3 → 4
+
+### Changed
+
+* Private storage is no longer served via URL
+
+### Added
+
+* MIT LICENSE file
+
+
+---
+
 ## [1.17.0] - 2026-02-02
-## Updated
+### Updated
 - PHP version to 8.4
 - Updated composer libraries
 
 ---
 
 ## [1.16.1] - 2025-12-15
-## Updated
+### Updated
 - README.md
 
 ---
 
 ## [1.16.0] - 2025-12-15
-## Cleanup
+### Cleanup
 - Moved some style files around
 - Renamed some css variables
   - `--borderNav`, `--borderDanger`, `--borderClickable`, `--borderClickableHover`

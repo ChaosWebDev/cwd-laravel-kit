@@ -9,8 +9,9 @@ A minimal, modern Laravel **v12.\*** starter kit built for rapid development wit
 ## 📦 Features/Requirements
 
 -   ✅ PHP v8.4+
--   ✅ Laravel 12.\*
--   ✅ Livewire v3
+-   ✅ Laravel 13.\*
+-   ✅ Laravel Boost 2.\*
+-   ✅ Livewire v4
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
 -   ✅ Utility-based SCSS (Bootstrap-inspired utility classes)
 -   ✅ Livewire views organized under `resources/views`
@@ -30,7 +31,7 @@ Clone manually:
 ```bash
 git clone https://github.com/ChaosWebDev/cwd-laravel-kit.git your-project-name
 cd your-project-name
-rm -rf .git # or ri .git -r -force for windows
+rm -rf .git # or `ri .git -r -force` for windows
 composer install
 npm install && npm run dev
 cp .env.example .env
@@ -86,8 +87,8 @@ GitHub: [ChaosWebDev/cwd-laravel-kit](https://github.com/ChaosWebDev/cwd-laravel
 
 ## Related Project Documentation
 
-- [Laravel](https://laravel.com/docs/12.x/installation)
-- [Livewire](https://livewire.laravel.com/docs/3.x/quickstart)
+- [Laravel](https://laravel.com/docs/13.x/installation)
+- [Livewire](https://livewire.laravel.com/docs/4.x/quickstart)
 - [NativePHP](https://nativephp.com/docs/desktop/2/getting-started/introduction)
 - [Laravel MongoDB](https://github.com/mongodb/laravel-mongodb)
 
