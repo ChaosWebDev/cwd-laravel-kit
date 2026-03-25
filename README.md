@@ -11,9 +11,9 @@ A minimal, modern Laravel **v13.\*** starter kit built for rapid development wit
 -   ✅ PHP v8.4+
 -   ✅ Laravel 13.\*
 -   ✅ Laravel Boost 2.\*
--   ✅ Livewire v4
+-   ✅ Livewire v4.\*
 -   ✅ SCSS-ready via Vite (`npm i -D sass`)
--   ✅ Utility-based SCSS (Bootstrap-inspired utility classes)
+-   ✅ SCSS package (via npm) cwdscss
 -   ✅ Livewire views organized under `resources/views`
 -   ✅ User migration separated into its own clean file
 -   ✅ Added `APP_TIMEZONE` back to `.env` and `configs/app.php`. Defaults to `America/Denver`
@@ -76,6 +76,47 @@ git tag v0.0.1 -m "Release v0.0.1"
 git push
 git push origin v0.0.1
 ```
+---
+
+## Styling
+
+`cwdscss` is included by default and can be imported in several ways depending on your needs.
+
+### Import everything
+
+```scss
+@use "cwdscss" as *;
+```
+
+Includes all utilities, classes, and components.
+This will output CSS.
+
+### Core only (no CSS output)
+
+```scss
+@use "cwdscss/core" as *;
+```
+
+Includes variables, mixins, and themes only.
+Safe to use globally.
+
+### Components
+
+```scss
+@use "cwdscss/components";
+```
+
+Includes UI components and layout styles.
+Outputs CSS.
+
+### Utility classes
+
+```scss
+@use "cwdscss/classes";
+```
+
+Includes utility classes such as spacing, flex, and typography.
+Outputs CSS.
 
 ---
 

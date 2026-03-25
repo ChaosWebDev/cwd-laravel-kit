@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0] - 2026-03-25
+### Removed
+- Local styling (moved to external npm package)
+
+### Added
+- Installed cwdscss
+- Added `resources/styles/app.scss` w/ imports from cwdscss
+
+### Updated
+- Livewire config to use proper layout key
+- Changed layout location in Livewire config to layouts::app
+- Moved layouts from `views/components/layouts` to `views/layouts`
+
+---
+
 ## [1.19.1] - 2026-03-25
 ### Updated
 * README.md badges set to proper versions
