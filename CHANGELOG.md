@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2026-04-03
+### LIVEWIRE
+- Updated Livewire parts to fit the v4 format of Livewire
+
+### Routes
+- Fixed routes to use the bootstrap formatting
+- Added `api.php` route file
+
+---
+
 ## [2.0.0] - 2026-03-25
 ### Removed
 - Local styling (moved to external npm package)
