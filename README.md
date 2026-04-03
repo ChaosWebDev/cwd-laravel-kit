@@ -43,7 +43,7 @@ php artisan key:generate
 ## 📁 Directory Highlights
 
 -   `resources/styles/` → Built to contain view stylings as partials to be forwarded in `app.scss`
--   `resources/views/components/layouts/app.blade.php` → Updated default Livewire layout location
+-   `resources/views/layouts/app.blade.php` → Default Livewire layout location
 -   `database/migrations/` → `users` table isolated in its own migration
 
 ---
