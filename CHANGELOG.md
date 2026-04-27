@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.1] - 2026-04-27
+### NativePHP
+- Updated `php kit` for when use NativePHP is approved to use `-W` in the require line
+  - `composer require nativephp/desktop -W` instead of `composer require nativephp/desktop`
+
+---
+
 ## [2.1.0] - 2026-04-03
 ### LIVEWIRE
 - Updated Livewire parts to fit the v4 format of Livewire

@@ -27,7 +27,7 @@ $line = strtolower(trim(fgets($stdin)));
 
 if ($line === 'y') {
     echo "🧱 Adding NativePHP requirement..." . PHP_EOL;
-    passthru('composer require nativephp/desktop');
+    passthru('composer require nativephp/desktop -W');
     passthru('php artisan native:install');
 }
 
