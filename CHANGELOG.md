@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.1] - 2026-05-12
+### Changed
+- Updated `README.md` to match new updates
+
+---
+
 ## [2.2.0] - 2026-05-12
 ### Added
 
@@ -20,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Updated `composer.json` version metadata
 - Updated `package.json` version metadata
+- Updated `vite.config.js` to align with updated Laravel version
 - Improved project release/version workflow automation
 
 
