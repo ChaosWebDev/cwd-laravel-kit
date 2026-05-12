@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.0] - 2026-05-12
+### Added
+
+- Added `sync` Artisan command for automated Git commits, tagging, and pushes
+- Added semantic version bump support for major, minor, and patch releases
+- Added persistent application version tracking using the `configs` table
+- Added `Config` model and database migration
+- Added default version seeding in `DatabaseSeeder`
+
+### Changed
+
+- Updated `composer.json` version metadata
+- Updated `package.json` version metadata
+- Improved project release/version workflow automation
+
+
+---
+
 ## [2.1.1] - 2026-04-27
 ### NativePHP
 - Updated `php kit` for when use NativePHP is approved to use `-W` in the require line
